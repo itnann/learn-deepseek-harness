@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Learn DeepSeek Harness 课程演进地图</title>
+  <desc id="desc">十二章从 Agent Loop 依次演进到工具注册、策略、中间件、Session 视图、上下文、Provider、生命周期、Scope、多入口组合、设计取舍和综合 Harness。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 30px 'Microsoft YaHei',sans-serif;fill:#172033}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#596579}.card{fill:#fff;stroke:#cbd5e1;stroke-width:2}.n{font:700 16px 'Microsoft YaHei',sans-serif;fill:#fff}.t{font:700 18px 'Microsoft YaHei',sans-serif;fill:#172033}.d{font:14px 'Microsoft YaHei',sans-serif;fill:#64748b}.arrow{stroke:#94a3b8;stroke-width:2.5;fill:none;marker-end:url(#a)}
+    </style>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="520" rx="24"/>
+  <text class="title" x="60" y="58">一个循环，怎样长成可组合运行时？</text>
+  <text class="sub" x="60" y="88">每章只增加一种压力和一种机制；箭头表示学习顺序，不表示必须一次采用全部设计。</text>
+  <path class="arrow" d="M238 175H280"/><path class="arrow" d="M518 175H560"/><path class="arrow" d="M798 175H840"/>
+  <path class="arrow" d="M1080 220V272"/><path class="arrow" d="M842 357H800"/><path class="arrow" d="M562 357H520"/><path class="arrow" d="M282 357H240"/>
+  <g transform="translate(40 120)"><rect class="card" width="200" height="110" rx="14"/><circle cx="30" cy="28" r="18" fill="#2563eb"/><text class="n" x="20" y="34">01</text><text class="t" x="58" y="34">Agent Loop</text><text class="d" x="20" y="68">决定 → 执行 → 观察</text><text class="d" x="20" y="91">先形成最小闭环</text></g>
+  <g transform="translate(280 120)"><rect class="card" width="240" height="110" rx="14"/><circle cx="30" cy="28" r="18" fill="#2563eb"/><text class="n" x="20" y="34">02</text><text class="t" x="58" y="34">能力与治理</text><text class="d" x="20" y="68">Registry → Policy</text><text class="d" x="20" y="91">Middleware</text></g>
+  <g transform="translate(560 120)"><rect class="card" width="240" height="110" rx="14"/><circle cx="30" cy="28" r="18" fill="#0f766e"/><text class="n" x="20" y="34">05</text><text class="t" x="58" y="34">事实与上下文</text><text class="d" x="20" y="68">Event → Projection</text><text class="d" x="20" y="91">Context Assembly</text></g>
+  <g transform="translate(840 120)"><rect class="card" width="240" height="110" rx="14"/><circle cx="30" cy="28" r="18" fill="#0f766e"/><text class="n" x="20" y="34">07</text><text class="t" x="58" y="34">运行时边界</text><text class="d" x="20" y="68">Provider → Lifecycle</text><text class="d" x="20" y="91">替换实现，正确收尾</text></g>
+  <g transform="translate(840 302)"><rect class="card" width="240" height="110" rx="14"/><circle cx="30" cy="28" r="18" fill="#c2410c"/><text class="n" x="20" y="34">09</text><text class="t" x="58" y="34">委派与组合</text><text class="d" x="20" y="68">Subagent Scope</text><text class="d" x="20" y="91">Composition Root</text></g>
+  <g transform="translate(560 302)"><rect class="card" width="240" height="110" rx="14"/><circle cx="30" cy="28" r="18" fill="#c2410c"/><text class="n" x="20" y="34">11</text><text class="t" x="58" y="34">设计取舍</text><text class="d" x="20" y="68">通用组合 vs 深度集成</text><text class="d" x="20" y="91">比较目标，不排高低</text></g>
+  <g transform="translate(280 302)"><rect x="0" y="0" width="240" height="110" rx="14" fill="#172033"/><circle cx="30" cy="28" r="18" fill="#f59e0b"/><text class="n" x="20" y="34">12</text><text x="58" y="34" style="font:700 18px 'Microsoft YaHei',sans-serif;fill:#fff">Mini Harness</text><text x="20" y="68" style="font:14px 'Microsoft YaHei',sans-serif;fill:#dbe4f0">机制回到一个小循环</text><text x="20" y="91" style="font:14px 'Microsoft YaHei',sans-serif;fill:#dbe4f0">按真实压力逐层采用</text></g>
+  <g transform="translate(40 302)"><rect x="0" y="0" width="200" height="110" rx="14" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/><text class="t" x="20" y="38">学习终点</text><text class="d" x="20" y="69">不是复刻目录</text><text class="d" x="20" y="92">而是会判断下一层</text></g>
+  <text class="sub" x="60" y="476">最小闭环 → 能力治理 → 信息治理 → 运行治理 → 产品组合 → 架构判断</text>
+</svg>

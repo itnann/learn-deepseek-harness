@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 570" font-family="'Noto Sans CJK SC', 'Microsoft YaHei', system-ui, sans-serif">
+  <title>Harness 从最小循环到组合平台的渐进式演进</title>
+  <desc>七个阶段依次增加工具注册、策略、历史、执行环境、生命周期、作用域和多入口组合，每一步复杂度与能力同时增加。</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#17365f"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1040" height="570" rx="12" fill="#f8fafc"/>
+  <rect width="1040" height="54" rx="12" fill="url(#header)"/>
+  <rect y="44" width="1040" height="10" fill="url(#header)"/>
+  <text x="520" y="35" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">每次只提取一种责任，复杂度随真实问题增长</text>
+
+  <text x="48" y="92" fill="#475569" font-size="11">简单</text>
+  <line x1="90" y1="88" x2="950" y2="88" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="965" y="92" fill="#475569" font-size="11">平台化</text>
+
+  <g font-size="11">
+    <rect x="45" y="125" width="110" height="108" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.7"/>
+    <text x="100" y="151" text-anchor="middle" fill="#1e40af" font-weight="700">阶段 0</text>
+    <text x="100" y="174" text-anchor="middle" fill="#1e3a8a">最小 Loop</text>
+    <text x="100" y="198" text-anchor="middle" fill="#64748b" font-size="9">模型 ↔ 工具</text>
+    <text x="100" y="216" text-anchor="middle" fill="#64748b" font-size="9">完成闭环</text>
+
+    <line x1="155" y1="179" x2="177" y2="179" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="180" y="125" width="110" height="108" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.7"/>
+    <text x="235" y="151" text-anchor="middle" fill="#075985" font-weight="700">阶段 1</text>
+    <text x="235" y="174" text-anchor="middle" fill="#0c4a6e">Tool Registry</text>
+    <text x="235" y="198" text-anchor="middle" fill="#64748b" font-size="9">新增工具</text>
+    <text x="235" y="216" text-anchor="middle" fill="#64748b" font-size="9">不修改 Loop</text>
+
+    <line x1="290" y1="179" x2="312" y2="179" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="315" y="125" width="110" height="108" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.7"/>
+    <text x="370" y="151" text-anchor="middle" fill="#5b21b6" font-weight="700">阶段 2</text>
+    <text x="370" y="174" text-anchor="middle" fill="#5b21b6">Policy 管线</text>
+    <text x="370" y="198" text-anchor="middle" fill="#64748b" font-size="9">权限 / 审批</text>
+    <text x="370" y="216" text-anchor="middle" fill="#64748b" font-size="9">超时 / 日志</text>
+
+    <line x1="425" y1="179" x2="447" y2="179" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="450" y="125" width="110" height="108" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+    <text x="505" y="151" text-anchor="middle" fill="#065f46" font-weight="700">阶段 3</text>
+    <text x="505" y="174" text-anchor="middle" fill="#065f46">History</text>
+    <text x="505" y="198" text-anchor="middle" fill="#64748b" font-size="9">持久化 / 恢复</text>
+    <text x="505" y="216" text-anchor="middle" fill="#64748b" font-size="9">事实与视图</text>
+
+    <line x1="560" y1="179" x2="582" y2="179" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="585" y="125" width="110" height="108" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.7"/>
+    <text x="640" y="151" text-anchor="middle" fill="#9a3412" font-weight="700">阶段 4</text>
+    <text x="640" y="174" text-anchor="middle" fill="#9a3412">Provider</text>
+    <text x="640" y="198" text-anchor="middle" fill="#64748b" font-size="9">本地 / 容器</text>
+    <text x="640" y="216" text-anchor="middle" fill="#64748b" font-size="9">统一执行世界</text>
+
+    <line x1="695" y1="179" x2="717" y2="179" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="720" y="125" width="110" height="108" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.7"/>
+    <text x="775" y="151" text-anchor="middle" fill="#991b1b" font-weight="700">阶段 5</text>
+    <text x="775" y="174" text-anchor="middle" fill="#991b1b">Lifecycle</text>
+    <text x="775" y="198" text-anchor="middle" fill="#64748b" font-size="9">取消 / 清理</text>
+    <text x="775" y="216" text-anchor="middle" fill="#64748b" font-size="9">后台任务</text>
+
+    <line x1="830" y1="179" x2="852" y2="179" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="855" y="125" width="140" height="108" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.7"/>
+    <text x="925" y="151" text-anchor="middle" fill="#0f766e" font-weight="700">阶段 6–7</text>
+    <text x="925" y="174" text-anchor="middle" fill="#0f766e">Scope + Composition</text>
+    <text x="925" y="198" text-anchor="middle" fill="#64748b" font-size="9">多 Agent / 多入口</text>
+    <text x="925" y="216" text-anchor="middle" fill="#64748b" font-size="9">插件 / Profile</text>
+  </g>
+
+  <rect x="45" y="274" width="380" height="86" rx="10" fill="#eff6ff" stroke="#60a5fa"/>
+  <text x="235" y="300" text-anchor="middle" fill="#1e40af" font-size="12" font-weight="700">大多数内部工具和小型产品</text>
+  <text x="235" y="325" text-anchor="middle" fill="#475569" font-size="10">阶段 0–2 已能完成任务并统一治理行动</text>
+  <text x="235" y="345" text-anchor="middle" fill="#64748b" font-size="9">不要因为看到成熟框架，就跳过这些简单阶段</text>
+
+  <rect x="450" y="274" width="245" height="86" rx="10" fill="#ecfdf5" stroke="#34d399"/>
+  <text x="572" y="300" text-anchor="middle" fill="#065f46" font-size="12" font-weight="700">长期运行的生产产品</text>
+  <text x="572" y="325" text-anchor="middle" fill="#475569" font-size="10">阶段 3–5 处理恢复、隔离与生命周期</text>
+  <text x="572" y="345" text-anchor="middle" fill="#64748b" font-size="9">这是可靠性复杂度开始回本的位置</text>
+
+  <rect x="720" y="274" width="275" height="86" rx="10" fill="#f5f3ff" stroke="#8b5cf6"/>
+  <text x="857" y="300" text-anchor="middle" fill="#5b21b6" font-size="12" font-weight="700">多产品 Harness 平台</text>
+  <text x="857" y="325" text-anchor="middle" fill="#475569" font-size="10">阶段 6–7 才需要完整 Scope 与组合能力</text>
+  <text x="857" y="345" text-anchor="middle" fill="#64748b" font-size="9">同时承担更高的配置和调试成本</text>
+
+  <rect x="80" y="402" width="880" height="112" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="520" y="430" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">贯穿所有阶段的核心没有改变</text>
+  <text x="520" y="458" text-anchor="middle" fill="#1e3a8a" font-size="12">观察 → 模型决策 → Harness 执行 → 记录结果 → 下一次观察</text>
+  <text x="520" y="484" text-anchor="middle" fill="#64748b" font-size="10">升级的只是责任归属、可替换性、恢复能力和安全边界</text>
+  <text x="520" y="502" text-anchor="middle" fill="#0f766e" font-size="10" font-weight="700">合理停止比追求最终形态更重要</text>
+</svg>
