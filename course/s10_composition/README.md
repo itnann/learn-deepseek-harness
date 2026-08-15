@@ -12,14 +12,9 @@ CLI 读取命令行字符串，Web 接收 JSON，测试直接传对象。如果�
 
 ## 最小方案
 
-```mermaid
-flowchart LR
-    CLI["CLI Adapter"] --> APP["AppCore"]
-    WEB["Web Adapter"] --> APP
-    TEST["Test Adapter"] --> APP
-    ROOT["Composition Root"] --> APP
-    ROOT --> REG["Registry / Policy / Store"]
-```
+![多入口、同一核心与集中装配](images/overview.svg)
+
+读图重点：左边三个 Adapter 只翻译输入；右边 Composition Root 只装配实现；中间 AppCore 才拥有一致的产品行为。
 
 - Adapter 只把输入翻译成核心请求，把核心事件翻译成对应输出。
 - AppCore 不知道 HTTP、终端颜色或 JSON。

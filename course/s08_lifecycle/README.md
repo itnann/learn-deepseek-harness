@@ -12,19 +12,9 @@ Agent Loop 收到取消信号后 `break`，看起来已经停止。但后台工�
 
 ## 最小方案
 
-```mermaid
-sequenceDiagram
-    participant U as 用户
-    participant L as Lifecycle
-    participant A as Agent
-    participant T as 后台工具
-    U->>L: cancel()
-    L->>A: cancellation signal
-    L->>T: cancellation signal
-    A-->>L: stop
-    T-->>L: cancelled
-    L->>L: cleanup（逆序）
-```
+![取消传播与逆序清理](images/overview.svg)
+
+读图顺序：红色是取消向下传播，绿色是任务确认停止后回到 `finally`；底部 Cleanup Stack 按后进先出释放依赖资源。
 
 Lifecycle 负责三件事：
 

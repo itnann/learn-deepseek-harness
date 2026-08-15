@@ -14,14 +14,9 @@
 
 ## 最小方案
 
-```mermaid
-flowchart LR
-    U["用户消息"] --> M["模型决定下一步"]
-    M -->|"tool_call"| H["Harness 执行工具"]
-    H --> R["追加 tool_result"]
-    R --> M
-    M -->|"final"| E["结束"]
-```
+![Agent Loop 最小闭环](images/overview.svg)
+
+读图顺序：从左到右看第一次行动，再沿橙色虚线看工具结果怎样回到 `messages[]`。这条回路是后续所有机制都不能破坏的核心。
 
 循环只认识两种模型输出：
 

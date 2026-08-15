@@ -18,15 +18,9 @@
 
 ## 最小方案
 
-```mermaid
-flowchart LR
-    A["append-only events"] --> M["model_view()"]
-    A --> U["ui_view()"]
-    A --> D["audit_view()"]
-    M --> L["LLM"]
-    U --> S["界面"]
-    D --> O["调试 / 审计"]
-```
+![Session 事实源与多种视图](images/overview.svg)
+
+读图重点：左边事件流从不删除；右边三个消费者各自投影。同一条 Policy 事件可以不进入模型，却仍然留在审计历史中。
 
 Session 只做两件事：追加事实、按用途派生视图。
 

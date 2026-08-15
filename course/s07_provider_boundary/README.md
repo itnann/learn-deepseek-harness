@@ -22,13 +22,9 @@ class EventStore(Protocol):
 
 然后由不同 Provider 实现：
 
-```mermaid
-flowchart LR
-    C["Session Core"] --> P["EventStore Contract"]
-    P --> M["Memory Provider"]
-    P --> F["Local File Provider"]
-    P --> R["Remote Provider"]
-```
+![Provider 与稳定契约](images/overview.svg)
+
+读图重点：中间的 Contract 是窄桥，不是把右边所有实现细节复制一遍。Core 只依赖桥上承诺的稳定语义。
 
 核心依赖能力，不依赖实现位置。Provider 也不是“给每个类都套接口”，它只应包住真实变化轴。
 

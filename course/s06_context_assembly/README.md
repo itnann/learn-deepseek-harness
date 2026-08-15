@@ -20,15 +20,9 @@ ContextBlock(source="workspace", priority=80, text="工作区：demo/")
 
 Assembler 负责排序、按条件加载和预算裁剪。
 
-```mermaid
-flowchart LR
-    I["Identity"] --> A["Assembler"]
-    W["Workspace"] --> A
-    S["Skill catalog"] --> A
-    T["Task state"] --> A
-    A --> B["Budget / order"]
-    B --> P["System context"]
-```
+![上下文贡献与预算组装](images/overview.svg)
+
+读图重点：左边数字是优先级，不是执行顺序；组装器先判断本轮是否需要，再让高价值信息优先占用预算。
 
 这里最重要的不是把字符串拆成函数，而是让三件事可观察：这段信息从哪里来、为什么本轮出现、预算不足时先舍弃谁。
 

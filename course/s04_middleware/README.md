@@ -22,15 +22,9 @@ def logging(call, next_handler):
     return result
 ```
 
-```mermaid
-flowchart LR
-    C["ToolCall"] --> L1["logging before"]
-    L1 --> P1["policy before"]
-    P1 --> H["handler"]
-    H --> P2["policy after"]
-    P2 --> L2["logging after"]
-    L2 --> R["ToolResult"]
-```
+![Middleware 洋葱执行链](images/overview.svg)
+
+读图重点：紫色箭头由外向内进入，绿色箭头由内向外返回；红色支路表示 Policy 不调用 `next()` 时如何短路。
 
 这像洋葱：进入顺序是日志 → 计时 → Policy → handler，返回顺序相反。Policy 可以在拒绝时不调用 `next`，从而短路执行链。
 

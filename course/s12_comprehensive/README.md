@@ -24,18 +24,9 @@ while True:
 
 每个复杂问题都在自己的边界内：
 
-```mermaid
-flowchart TD
-    S["Surface Adapter"] --> A["AppCore / Agent Loop"]
-    A --> C["Context Assembler"]
-    A --> SS["Session Views"]
-    A --> R["Scoped Tool Runtime"]
-    R --> M["Middleware"]
-    M --> P["Policy"]
-    M --> G["Tool Registry"]
-    SS --> E["EventStore Provider"]
-    A --> L["Lifecycle"]
-```
+![Mini Harness 完整装配](images/overview.svg)
+
+读图顺序：先看顶部产品请求怎样进入核心 Loop，再看左侧信息输入、右下工具执行链，最后看底部 Lifecycle 怎样包住整次运行。
 
 ## 运行
 

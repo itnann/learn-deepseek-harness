@@ -18,12 +18,9 @@ Scope 是一张明确的能力清单：
 reviewer = parent_scope.derive(allow={"read_file", "search"})
 ```
 
-```mermaid
-flowchart TD
-    P["Parent Scope\nread / write / delete / deploy"] --> D["derive"]
-    D --> R["Reviewer Scope\nread / search"]
-    D --> T["Test Scope\nread / run_tests"]
-```
+![子 Agent 的最小能力派生](images/overview.svg)
+
+读图重点：父 Scope 是能力上限；两条橙色派生路径只能选择它的子集。灰色能力不是“提醒别用”，而是 Runtime 根本不提供。
 
 派生规则应满足：子 Scope 只能缩小，不能凭空扩大。工具注册表可以是共享的，但 `ScopedRuntime` 会在分发前检查当前 Agent 是否拥有该 Capability。
 

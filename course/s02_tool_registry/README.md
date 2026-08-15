@@ -32,13 +32,9 @@ tool = TOOLS[call.name]
 result = tool.handler(**call.arguments)
 ```
 
-```mermaid
-flowchart LR
-    C["ToolCall(name, args)"] --> R["Registry"]
-    R --> D["Tool definition"]
-    R --> H["Handler"]
-    H --> O["ToolResult"]
-```
+![工具注册与分发](images/overview.svg)
+
+读图重点：Agent Loop 只认识稳定的 `execute()`；右侧工具池怎样增长，都被 Registry 隔离在循环之外。
 
 循环只调用 `registry.execute(call)`，不再知道有几个工具、每个工具怎样实现。
 
